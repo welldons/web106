@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<patches>
+ <patch file="skill3_contextscriptdata_*.xml">
+  <select-nodes query="/table/contextscript/stance">
+   <select-node query="./layer">
+    <insert-sibling-before name="layer">
+     <append-buffer>
+      <![CDATA[ 
+        <decision>
+          <result special-2="66101" control-mode="bns" />
+        </decision>
+      ]]>
+     </append-buffer>
+    </insert-sibling-before>
+   </select-node>
+  </select-nodes>
+ </patch>
+</patches>
